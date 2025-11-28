@@ -19,9 +19,11 @@ services:
     image: dpage/pgadmin4
     container_name: chiro-pgadmin
     restart: always
+    env_file:
+      - .env
     environment:
-      PGADMIN_DEFAULT_EMAIL: corobsmith@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: Test123
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     ports:
       - "8080:80"
     volumes:
