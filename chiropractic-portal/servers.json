@@ -1,0 +1,15 @@
+{
+    "Servers": {
+      "1": {
+        "Name": "Chiro Local",
+        "Group": "Servers",
+        "Host": "chiro-app-local",
+        "Port": 5432,
+        "MaintenanceDB": "chiro-app-local",
+        "Username": "postgres",
+        "SSLMode": "prefer",
+        "PassFile": "/pgpass"
+      }
+    }
+  }
+  

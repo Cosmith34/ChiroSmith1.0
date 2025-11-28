@@ -1,5 +1,5 @@
-# Logs
-logs
+# ─── Logs ──────────────────────────────────────────────
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +7,53 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# ─── Node ──────────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
 
-# Editor directories and files
+# ─── Environment Files ─────────────────────────────────
+.env
+.env.*
+
+# ─── Supabase Dumps ───────────────────────────────────
+supabase_backup.dump
+
+# ─── OS / Editor Files ────────────────────────────────
+.DS_Store
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# ─── Docker / Database ────────────────────────────────
+chiro-db-postgres/data/
+chiro-db-postgres/pgdata/
+*.pid
+*.sock
+
+#SQL files
+db/schema_dump.sql
+backend/scripts/schema_dump.sql
+*.sql
+
+# ─── Output / Temporary Files ─────────────────────────
+*.local
+.cache/
+coverage/
+build/
+tmp/
+test-output/
+scripts/tmp/
+scripts/*.log
+
+# ─── Custom / TODO ─────────────────────────────────────
+# Sync Script TODO: Update to not have key
+scripts/clone_supabase_to_local.sh
+
+
+
