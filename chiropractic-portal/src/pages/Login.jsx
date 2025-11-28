@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import logo from '../assets/Logo.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Login() {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -59,6 +60,17 @@ export default function Login() {
             Log In
           </button>
         </form>
+
+        <button
+          onClick={() => {
+            // seed a demo name so the Background greeting shows it
+            localStorage.setItem('firstName', 'Connor')
+            navigate('/background')
+          }}
+          className="w-full mt-3 py-2 bg-white text-[#133f59] border border-[#133f59] rounded-lg font-semibold hover:(bg-[#e7f0f7]) transition-all"
+        >
+          Test Background
+        </button>
 
         <p className="text-center text-sm text-gray-600 mt-6">
           Don't have an account?

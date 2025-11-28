@@ -13,21 +13,6 @@ const configs = {
     migrations: {
       directory: './migrations'
     }
-  },
-
-  development: {
-    client: 'pg',
-    connection: {
-      host: process.env.SUPABASE_HOST,
-      user: process.env.SUPABASE_USER,
-      password: process.env.SUPABASE_PASSWORD,
-      database: process.env.SUPABASE_DB,
-      port: process.env.SUPABASE_PORT,
-      ssl: { rejectUnauthorized: false }
-    },
-    migrations: {
-      directory: './migrations'
-    }
   }
 
   // Add production config here later
